@@ -15,7 +15,7 @@ print(words[21:30])
 print(words[31:len(words)],"\n")
 
 
-#格式化输出
+#输出
 age=22
 name='CUQPTLei'
 print("I am %s, i am %d years old."%(name,age))
@@ -32,7 +32,8 @@ a=0xc8
 print("%#x %x"%(a,a))
 
 
-#input,输入必须是表达式
+#输入input
+#输入必须是表达式
 age=input("your age:")
 print("您的年龄是",age)
 
@@ -41,12 +42,20 @@ print(in1)
 print(type(in1))
 
 s="abc"+"def"
-in2=input("s:")
+in2=input(s)
 print(in2)
 print(type(in2))
 
-s1=3+5
-s2=100
-in3=input()
-print(in3)
-print(type(in3))
+# 运算符和表达式
+
+
+
+
+
+
+
+
+
+
+
+

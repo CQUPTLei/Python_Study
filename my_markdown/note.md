@@ -15,3 +15,25 @@
 ## 换行输出
 
 # 输入
+
+
+# 运算符和表达式
+
+## 算术运算符
+![Alt text](img/arithmetic.png "optional title")
+## 比较运算符
+![Alt text](img/compare.png "optional title")
+## 赋值运算符
+![Alt text](img/evaluation.png "optional title")
+## 位运算符
+![Alt text](img/bit.png "optional title")
+## 逻辑运算符
+![Alt text](img/logic.png "optional title")
+## 成员运算符
+![Alt text](img/member.png "optional title")
+## 身份运算符
+![Alt text](img/identity.png "optional title")
+## 运算的优先级
+![Alt text](img/prior.png "optional title")
+
+
