@@ -3,7 +3,7 @@
 # @Author : CQUPTLei
 # @File : py_2.py
 # @Softeare : PyCharm
-
+# content：判断语句和循环语句
 
 '''
 条件判断
@@ -29,6 +29,8 @@ import random
 x = random.randint(0, 100)  # [0,100]之间的随机数
 print(x, "\n")
 
+
+
 # for循环
 for i in range(0,10,2):  #步长为2
     print(i)
@@ -43,6 +45,8 @@ print("\n")  # 遍历列表
 a = ["aa", 'bb', "cc"]
 for i in range(len(a)):
     print(i, a[i])
+
+
 
 # while循环,while可以配合else一起用
 print("\n")
@@ -59,6 +63,8 @@ while i<=100:
     i+=1
 print("\n计算1到100的和：",end,end="\n")
 
+
+
 # break结束整个循环，continue结束本次循环进入下一次循环
 i=0
 while i<10:
@@ -68,6 +74,7 @@ while i<10:
         continue
     print(i)
 print("\n")
+
 
 #乘法表
 i=1
