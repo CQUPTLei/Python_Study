@@ -62,3 +62,8 @@ for ... in ...  遍历列表或元组
 
 
 # 3.1 字符串
+1. 可以用单、双、三引号括起来，使用 \ 转移特殊字符
+2. python3 默认utf-8编码，所有字符串都是Unicode字符串
+3. 支持字符串拼接、截取
+
+![Alt text](img/alter_str.png "optional title")
