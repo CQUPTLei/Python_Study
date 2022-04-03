@@ -67,3 +67,6 @@ for ... in ...  遍历列表或元组
 3. 支持字符串拼接、截取
 
 ![Alt text](img/alter_str.png "optional title")
+
+# 3.2 列表
+列表常用操作
