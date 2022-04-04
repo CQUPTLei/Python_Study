@@ -125,9 +125,45 @@ print("\n修改指定下标内容后列表数据为:")
 for name in namelist:
     print(name,end='\t')
 
-# 8. 查（查找某元素是否在列表中）
+# 8. 查（查找某元素是否在列表中 in 、not in）
 findname=input('\n输入你要查找的姓名：')
-if findname in namelist:
+if findname in namelist:     #(比使用for循环更加快捷)
     print(findname+'在该列表里面')
 else:
     print(findname+'不在该列表里面')
+
+# 9. 指定下标范围内查找，返回找到的对应数据的下标
+print(namelist.index('小王',0,3))   #范围区间左闭右开，找不到会报错
+
+# 10.统计某一元素出现的次数
+print(namelist.count('小王'))
+
+# 11. 反转与排序
+numlist=[1,3,4,2,6,5,8]
+print(numlist)
+numlist.reverse()          #反转
+print(numlist)
+numlist.sort()              #升序
+print(numlist)
+numlist.sort(reverse=True)  #降序
+print(numlist)
+
+# 12.嵌套(与二维数组类似)
+superlist=[[1,2],['a','b'],['元歌','百里']]
+print(superlist[2][0]+'\n')
+
+#将9个老师随机分配到3个办公室
+import random
+office=[[],[],[]]
+teacher=['A','B','C','D','E','F','G','H','I']
+for name in teacher:
+    index=random.randint(0,2)
+    office[index].append(name)
+
+i=1
+for teacher in office:
+    print("办公室%d的人数为%d"%(i,len(teacher)))
+    i+=1
+    for name in teacher:
+        print(name,end='\t')
+    print('\n')
