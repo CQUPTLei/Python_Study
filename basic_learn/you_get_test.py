@@ -12,9 +12,9 @@ from you_get import common
 默认参数
 '''
 #视频链接
-v_url = 'https://www.bilibili.com/video/BV1JF411L7zw?spm_id_from=333.851.b_7265636f6d6d656e64.5'
+v_url = 'https://www.youtube.com/watch?v=o_nxIQTM_B0&list=RD3iM_06QeZi8&index=2&ab_channel=%EC%9D%B4%EC%A7%80%EA%B8%88%5BIUOfficial%5D'
 #保存格式
-v_format = 'dash-flv'
+v_format = '137'
 #保存路径
 save_dir = 'D:\Python_Study\File_Save\JayChou'
 
