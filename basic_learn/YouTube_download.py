@@ -16,40 +16,40 @@ v_url = 'https://www.bilibili.com/video/BV1JF411L7zw?spm_id_from=333.851.b_72656
 #保存格式
 v_format = 'dash-flv'
 #保存路径
-save_dir = 'D:\Python_Study\File_Save\JayChou'
+save_dir = 'D:\Python_Study\File_Save\IU'
 
-
-#定义提示信息
+#提示信息打印函数
+#'\033[5;36m' 用来设置输出内容的字体颜色和背景颜色
 def LOG(info):
     print('\033[5;36m' + 'You-get: ' + time.strftime('%Y-%m-%d %H:%M:%S',
         time.localtime(time.time())) + ' '+info + '\033[0m')
 
-
-#设要下载的视频连接
+#设置要下载的视频连接
 LOG("输入要下载的视频链接：")
 url=input("URL:")
 if url=='':
     pass
 else:
-    v_url=url
-
+    v_url=url.replace('&','"&"')
+    #print(v_url)
+    #v_url=url
 
 #设置代理,默认不设置
-LOG("是否需要设置代理下载（y/n）？")
-proxy=input()
-if proxy=='y':
-    common.set_http_proxy(input("请输入代理服务器和端口，例如：127.0.0.1:1080"))
-elif proxy=='':
-    pass
-
-# common.set_http_proxy('116.129.254.212:48603')
+#也可以在pycharm设置中设置（proxy）
+# LOG("是否需要设置代理下载（y/n）？")
+# proxy=input()
+# if proxy=='y':
+#     common.set_http_proxy(input("请输入代理服务器和端口，例如：127.0.0.1:1080"))
+# elif proxy=='':
+#     pass
+#或者直接设置
+# common.set_http_proxy('127.0.0.1:7890')
 
 #打印输出可供选择的清晰度
 LOG("正在加载可供下载的清晰度...")
 if input()=='':
     pass
 os.system('you-get -i '+v_url)
-
 
 #选择清晰度默认MP4最高画质
 LOG("请输入你要下载的清晰度（默认dash-flv）：")
@@ -59,7 +59,6 @@ if quality=='':
 else:
     v_format=quality
 
-
 #设置保存路径，默认为D:\Python_Study\File_Save
 LOG("请设置保存路径(默认路径为：D:\Python_Study\File_Save)")
 path=input("save path:")
@@ -67,7 +66,6 @@ if path=='':
     pass
 else:
     save_dir=path
-
 
 #根据设置的参数进行下载
 LOG("开始下载...")
