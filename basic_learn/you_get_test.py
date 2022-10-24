@@ -16,7 +16,7 @@ v_url = 'https://www.bilibili.com/video/BV1JF411L7zw?spm_id_from=333.851.b_72656
 #保存格式
 v_format = 'dash-flv'
 #保存路径
-save_dir = 'D:\Python_Study\File_Save'
+save_dir = 'D:\Python_Study\File_Save\JayChou'
 
 
 #定义提示信息
@@ -42,6 +42,7 @@ if proxy=='y':
 elif proxy=='':
     pass
 
+# common.set_http_proxy('116.129.254.212:48603')
 
 #打印输出可供选择的清晰度
 LOG("正在加载可供下载的清晰度...")
