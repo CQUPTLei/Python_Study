@@ -2,12 +2,12 @@
 # @TIME : 2022/10/24 下午 4:02
 # @Author : CQUPTLei
 # @File : YouTube_download.py.py
-# @Softeare : PyCharm
+# @Software : PyCharm
 
 import time
 import os
 from you_get import common
-
+import subprocess
 '''
 默认参数
 '''
@@ -49,6 +49,7 @@ else:
 LOG("正在加载可供下载的清晰度...")
 if input()=='':
     pass
+# subprocess.run(['you-get','-i',v_url])
 os.system('you-get -i '+v_url)
 
 #选择清晰度默认MP4最高画质
