@@ -4,7 +4,6 @@
 # @File :     yt-dlp_GUI.py
 # @Software : PyCharm
 
-# 本程序主窗口缩放会发生布局改变，读者可以修改为相对位置和相对大小
 
 import subprocess
 import tkinter
@@ -111,7 +110,7 @@ def start_download():
     # 鼠标放在相关函数上，弹窗中右键选择“编辑源”即可查看支持的参数及其说明
     download_opts = {
         # -----------------基本参数---------------------
-        'proxy': '127.0.0.1:7890',  # 代理
+        'proxy': '127.0.0.1:17858',  # 代理
         'format': Q,  # 音视频质量
         'paths': {'home': path},  # 保存路径
 
