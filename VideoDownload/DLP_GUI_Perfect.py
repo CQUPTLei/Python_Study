@@ -8,7 +8,7 @@ import threading
 DEFAULT_URL = 'Please input a video url'
 DEFAULT_VIDEO_FORMAT = 'bestvideo'
 DEFAULT_AUDIO_FORMAT = 'bestaudio'
-DEFAULT_PATH = r'G:\Yt_Dlp'
+DEFAULT_PATH = r'I:\YT_dlp'
 
 
 # 创建主窗口

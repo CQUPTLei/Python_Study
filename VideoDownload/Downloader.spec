@@ -6,7 +6,7 @@ block_cipher = None
 
 a = Analysis(
     ['DLP_GUI_Perfect.py'],
-    pathex=['D:\\Anaconda3\\envs\\study\\Lib\\site-packages'],
+    pathex=['C:\\Users\\14134\\.conda\\envs\\ytdlp\\Lib\\site-packages'],
     binaries=[],
     datas=[],
     hiddenimports=[],
@@ -27,7 +27,7 @@ exe = EXE(
     a.binaries,
     a.zipfiles,
     a.datas,
-    [('D:\\Anaconda3\\envs\\study\\python.exe', None, 'OPTION')],
+    [('C:\\Users\\14134\\.conda\\envs\\ytdlp\\python.exe', None, 'OPTION')],
     name='Downloader',
     debug=False,
     bootloader_ignore_signals=False,
