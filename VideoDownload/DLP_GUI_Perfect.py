@@ -104,15 +104,13 @@ class VideoDownloaderApp:
         if path:
             self.path.set(path)
 
-    # 选择视频格式（品质）
+    # 打印选择的视频格式（品质）
     def select_format(self):
         video_format = self.video_format.get()
         audio_format = self.audio_format.get()
-        # 以下是一个简单的示例，将 video_format 和 audio_format 直接拼接
-        Q = f'{video_format}+{audio_format}'
-        # 在这里你可以更新界面以反映用户选择的音视频格式
-        # 例如，你可以在日志中显示所选格式
-        self.log.insert(tk.END, f'已选择音视频格式：{Q}\n')
+        quality = video_format if not audio_format else audio_format if not video_format else video_format+'+'+audio_format
+        # 日志中显示所选格式
+        self.log.insert(tk.END, f'已选择音视频格式：{quality}\n')
 
     def print_info(self):
         thread = threading.Thread(target=self.get_info)
@@ -126,7 +124,7 @@ class VideoDownloaderApp:
         info_txt = tk.Text(info_win, bg='#CCCCFF', fg='#000000', font=("Roboto", 12), wrap='word')
         info_txt.place(relx=0, y=0, relheight=1, relwidth=1)
         info_txt.insert(tk.END, '正在获取该视频的格式信息...')
-        venv_path = r'D:\Anaconda3\envs\study\python.exe'
+        venv_path = r'C:\Users\14134\.conda\envs\ytdlp\python.exe'
         cmd = [venv_path, '-m', 'yt_dlp', '-F', self.url.get()]
         return_code = subprocess.run(cmd, stdout=subprocess.PIPE, text=True, encoding='utf-8', errors='replace')
         # return_code = subprocess.run(['yt-dlp', '-F', self.url.get()], stdout=subprocess.PIPE)
@@ -140,7 +138,11 @@ class VideoDownloaderApp:
 
     def download_thread(self):
         try:
-            Q = (self.video_format.get(), '+', self.audio_format.get())
+            video = self.video_format.get()
+            audio = self.audio_format.get()
+            # 检查是否有输入，如果有输入则添加到列表中
+            Q = audio if not video else video if not audio else video + '+' + audio
+            # Q = (self.video_format.get(), '+', self.audio_format.get())
             Q = "".join(Q)
 
             download_opts = {
