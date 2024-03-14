@@ -2,7 +2,7 @@
  False,
  False,
  False,
- ['E:\\Python_Study\\VideoDownload\\wx2.ico'],
+ ['E:\\Python_Study\\VideoDownload\\1.ico'],
  None,
  False,
  False,
@@ -3162,7 +3162,7 @@
  [],
  False,
  False,
- 1709307452,
+ 1709396953,
  [('runw.exe',
    'C:\\Users\\14134\\.conda\\envs\\ytdlp\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')])

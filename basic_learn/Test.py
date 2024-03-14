@@ -5,7 +5,15 @@
 # @Software : PyCharm
 # @Abstract :
 
-import pipreqs
+import numpy as np
+
+# print(3 > 2 in [True, False])
+#
+# print((3 > 2) in [True, False])
+#
+# print(True in [True, False])
+
+
 
 
 
