@@ -27,7 +27,7 @@ exe = EXE(
     a.binaries,
     a.zipfiles,
     a.datas,
-    [('C:\\Users\\14134\\.conda\\envs\\ytdlp\\python.exe', None, 'OPTION')],
+    [('C:\\Users\\14134\\.conda\\envs\\ytdlp\\pythonw.exe', None, 'OPTION')],
     name='Downloader',
     debug=False,
     bootloader_ignore_signals=False,

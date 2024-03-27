@@ -4,6 +4,9 @@ from tkinter import filedialog
 import yt_dlp
 import threading
 
+# pyinstaller -F --paths=C:\Users\14134\.conda\envs\ytdlp\Lib\site-packages --python=C:\Users\14134\.conda\envs\ytdlp\pythonw.exe  --noconsole  --icon=1.ico --name=Downloader DLP_GUI_Perfect.py
+
+
 # 默认参数
 DEFAULT_URL = 'Please input a video url'
 DEFAULT_VIDEO_FORMAT = 'bestvideo'
@@ -124,7 +127,7 @@ class VideoDownloaderApp:
         info_txt = tk.Text(info_win, bg='#CCCCFF', fg='#000000', font=("Roboto", 12), wrap='word')
         info_txt.place(relx=0, y=0, relheight=1, relwidth=1)
         info_txt.insert(tk.END, '正在获取该视频的格式信息...')
-        venv_path = r'C:\Users\14134\.conda\envs\ytdlp\python.exe'
+        venv_path = r'C:\Users\14134\.conda\envs\ytdlp\pythonw.exe'
         cmd = [venv_path, '-m', 'yt_dlp', '-F', self.url.get()]
         return_code = subprocess.run(cmd, stdout=subprocess.PIPE, text=True, encoding='utf-8', errors='replace')
         # return_code = subprocess.run(['yt-dlp', '-F', self.url.get()], stdout=subprocess.PIPE)
