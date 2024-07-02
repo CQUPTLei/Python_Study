@@ -11,7 +11,7 @@ import threading
 DEFAULT_URL = 'Please input a video url'
 DEFAULT_VIDEO_FORMAT = 'bestvideo'
 DEFAULT_AUDIO_FORMAT = 'bestaudio'
-DEFAULT_PATH = r'I:\YT_dlp'
+DEFAULT_PATH = r'F:\download'
 
 
 # 创建主窗口
@@ -31,7 +31,8 @@ class VideoDownloaderApp:
         self.create_ui()
 
     # 设置窗口大小，位置
-    def window_set(self, root, width, height):
+    @staticmethod
+    def window_set(root, width, height):
         screenwidth = root.winfo_screenwidth()  # 获取显示器尺寸
         screenheight = root.winfo_screenheight()
         size = '%dx%d+%d+%d' % (width, height, (screenwidth - width) / 2, (screenheight - height) / 5)
@@ -127,7 +128,7 @@ class VideoDownloaderApp:
         info_txt = tk.Text(info_win, bg='#CCCCFF', fg='#000000', font=("Roboto", 12), wrap='word')
         info_txt.place(relx=0, y=0, relheight=1, relwidth=1)
         info_txt.insert(tk.END, '正在获取该视频的格式信息...')
-        venv_path = r'C:\Users\14134\.conda\envs\ytdlp\pythonw.exe'
+        venv_path = r'D:\anaconda\envs\pylearn\pythonw.exe'
         cmd = [venv_path, '-m', 'yt_dlp', '-F', self.url.get()]
         return_code = subprocess.run(cmd, stdout=subprocess.PIPE, text=True, encoding='utf-8', errors='replace')
         # return_code = subprocess.run(['yt-dlp', '-F', self.url.get()], stdout=subprocess.PIPE)
